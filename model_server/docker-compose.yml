@@ -1,0 +1,9 @@
+services:
+  model-server:
+    build: .
+    container_name: model-server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models_store:/app/models_store
+    restart: unless-stopped
